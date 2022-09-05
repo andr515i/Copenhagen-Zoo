@@ -11,14 +11,14 @@ namespace Copenhagen_Zoo
         // this class serves the only purpose as to substitate a real person, which makes it useful in testing purposes
         // each zookeeper has a unique id, it will never be changed. however, for simplicity's sake, i will just start from 0 and add one for each creation, this does mean we need it from outside 
         private int _id;
-        public int id
+        internal int id
         {
             get { return _id; }
         }
 
         private string _name;  // stated in the assignment that the name could be changed, though only by hr, however that isnt too important right now
 
-        public string name
+        internal string name
         {
             get { return _name; }
             set { _name = value; }

@@ -9,7 +9,7 @@ namespace Copenhagen_Zoo
     class Animal
     {
         private bool _isMale;   // true = male, false = female
-        public bool isMale
+        internal bool isMale
         {
             get { return _isMale; }
             set { _isMale = value; }
@@ -17,21 +17,21 @@ namespace Copenhagen_Zoo
 
 
         private string _race;    //  ie, lion, elephant, giraffe etc.
-        public string race 
+        internal string race 
         {
             get { return _race; }
         }
 
 
         private string _gender;// easily printable gender
-        public string gender   
+        internal string gender   
         {
             get { return _gender; }
         }
 
 
         private bool _carnivore;  // only have carnivores or herbivores in our zoo >:) // if we did, i would have used an int instead
-        public bool carnivore
+        internal bool carnivore
         {
             get { return _carnivore; }
         } 
