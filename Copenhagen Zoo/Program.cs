@@ -11,22 +11,24 @@ namespace Copenhagen_Zoo
 
         // in this assignemnt i have tried my best to restrict as much as possible, only making what is absolutely neccesary or ideal visible to as little as posible
 
-    // only real thing i miss now is a class that would represent HR for the zookeepers, however i dont think its super improtant to implement, as its just more of the same
-
+   
         static void Main(string[] args)
         {            
-            //we get some test animals and zookeepers
+            //we get some test animals, zookeepers and 1 hr
             Animal[] lions = GetLions(10);
             Zookeeper[] zk = GetZooKeepers(10);
-
+            HR hr = new HR();
             // now we feed the animals because they must have been hungry
             bool food = zk[1].PressFoodButton();
             foreach (Animal animal in lions)
             {
-                animal.Eat(food);
+                animal.Eat(food);  // every lion feeds, however if i wanted multiple animals, i would throw them in a multidirectional array or list, and go through each animal racially (dont sue)
             }
 
-                
+
+            // name before: Steve
+            hr.changeName("Some new name", zk[4]);  // now we change zookeeper number 5's (index) name to some new name
+            // name after: Some new name
             Console.ReadLine();
             
         }

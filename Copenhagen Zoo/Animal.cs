@@ -56,6 +56,7 @@ namespace Copenhagen_Zoo
             {
                 _carnivore = false; // herbivore
             }
+            
         }
         internal void Eat(bool food)
         {
