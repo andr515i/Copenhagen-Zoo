@@ -12,7 +12,6 @@ namespace Copenhagen_Zoo
         internal bool isMale
         {
             get { return _isMale; }
-            set { _isMale = value; }
         }
 
 
@@ -36,7 +35,7 @@ namespace Copenhagen_Zoo
             get { return _carnivore; }
         } 
 
-        
+        // ctor
         public Animal(bool male, string animalRace, bool isCarnivore)
         {
             if (male)  // checks for gender upon initialization
@@ -48,7 +47,7 @@ namespace Copenhagen_Zoo
             }
             _race = animalRace;   // set the race
 
-            if (isCarnivore)
+            if (isCarnivore)  // could add the type of food it would eat here, and send that down to the eat method
             {
                 _carnivore = isCarnivore;   
             }
@@ -58,11 +57,11 @@ namespace Copenhagen_Zoo
             }
             
         }
-        internal void Eat(bool food)
-        {
+        internal void Eat(bool food)   // simulates eating, in a very imaginative sense
+        {  
             if (food)
             { 
-                if (_race=="lion")
+                if (_race=="lion")   // tried to do a little modular design, so you could add more if statements to send the appropriate foods and responses for that.
                 {
                     Console.WriteLine("nom nom nom      (the lion feeds on the meat given to it)");
 

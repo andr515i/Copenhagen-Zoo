@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Copenhagen_Zoo
-{
-    class HR
+{ // the most simple one of them all, as per assignment words, the only thing hr has privileges or rights to, is to change a zookeeprs name. nothing more, nothing less.
+    class HR 
     {
      
-        internal void changeName(string newName, Zookeeper zk)
+        internal void changeName(string newName, Zookeeper zk)  // we get the new name, aswell as the specific zookeeper from outside.
         {
             zk.name = newName;
         }
